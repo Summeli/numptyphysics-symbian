@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-numptyphysics-level">
+         <comment>NumptyPhysics level</comment>
+         <glob pattern="*.nph"/>
+  </mime-type>
+  <mime-type type="application/x-numptyphysics-collection">
+         <comment>NumptyPhysics collection</comment>
+         <glob pattern="*.npz"/>
+  </mime-type>
+  <mime-type type="application/x-numptyphysics-demo">
+         <comment>NumptyPhysics recording</comment>
+         <glob pattern="*.npd"/>
+  </mime-type>
+</mime-info>

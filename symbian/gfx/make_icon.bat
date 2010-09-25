@@ -1,0 +1,1 @@
+\S60\devices\S60_5th_Edition_SDK_v1.0\Epoc32\tools\mifconv.exe numptyphysics.mif /c32 "numptyphysics.svg"

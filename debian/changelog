@@ -1,0 +1,25 @@
+numptyphysics (0.3.0.9) unstable; urgency=low
+	
+  * action replay
+  * updated physics engine
+  * supports different screen sizes
+  * menus
+
+ -- Tim Edmonds <tmedmonds@gmail.com>  Thu, 16 Jan 2008 15:48:31 +0000
+
+numptyphysics (0.2) unstable; urgency=low
+	
+  * improved editor
+  * more levels
+  * web catalog
+  * mimetype/hildon integration
+  * bug fixes  
+
+ -- Tim Edmonds <tmedmonds@gmail.com>  Thu, 3 Apr 2008 15:48:31 +0000
+
+numptyphysics (0.1) unstable; urgency=low
+
+  * Initial Release
+
+ -- Tim Edmonds <tmedmonds@gmail.com>  Thu, 13 Mar 2008 15:48:31 +0000
+

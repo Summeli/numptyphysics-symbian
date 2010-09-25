@@ -1,0 +1,19 @@
+Win32 "port" by Thomas Perl <thpinfo.com>
+=========================================
+
+You need MinGW32 and msys to compile this. You will also need
+gcc-g++ from the mingw file release webpage and have your "make"
+binary linked to "mingw32-make", because the default "make" will
+not work and give you errors.
+
+You also need to install SDL and SDL_image development headers,
+and copy the DLL files from the Win32 binary distributions for
+SDL and SDL_image to this folder, so the "create-win32-dist.sh"
+script can find them and copy them into the correct location.
+
+Saved levels are placed in the "data" folder, and that's also
+where you should put downloaded levels.
+
+Upstream: http://numptyphysics.garage.maemo.org
+Win32 port: http://thpinfo.com/2008/numptyphysics/
+

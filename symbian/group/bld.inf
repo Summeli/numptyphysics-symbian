@@ -1,0 +1,63 @@
+/* NumptyPhysics bld build file
+ *
+ * Copyright (C) 2010 Summeli <summeli@summeli.fi>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ */
+
+PRJ_MMPFILES
+NumptyPhysics.mmp
+
+PRJ_EXPORTS
+../../data/blank.png		/epoc32/winscw/c/private/E3E84F3E/blank.png
+../../data/choose.png		/epoc32/winscw/c/private/E3E84F3E/choose.png
+../../data/close.png		/epoc32/winscw/c/private/E3E84F3E/close.png
+../../data/edit.png		/epoc32/winscw/c/private/E3E84F3E/edit.png
+../../data/femkeklaver.ttf		/epoc32/winscw/c/private/E3E84F3E/femkeklaver.ttf
+../../data/font.npf		/epoc32/winscw/c/private/E3E84F3E/font.npf
+../../data/forward.png		/epoc32/winscw/c/private/e3e84f3eforward.png
+../../data/help.png		/epoc32/winscw/c/private/E3E84F3E/help.png
+../../data/next.png		/epoc32/winscw/c/private/E3E84F3E/next.png
+../../data/next_win32.png		/epoc32/winscw/c/private/E3E84F3E/next_win32.png
+../../data/paper.jpg		/epoc32/winscw/c/private/E3E84F3E/paper.jpg
+../../data/paper.png		/epoc32/winscw/c/private/E3E84F3E/paper.png
+../../data/pause.png		/epoc32/winscw/c/private/E3E84F3E/pause.png
+../../data/pen.png		/epoc32/winscw/c/private/E3E84F3E/pen.png
+../../data/play.png		/epoc32/winscw/c/private/E3E84F3E/play.png
+../../data/record.png		/epoc32/winscw/c/private/E3E84F3E/record.png
+../../data/reset.png		/epoc32/winscw/c/private/E3E84F3E/reset.png
+../../data/share.png		/epoc32/winscw/c/private/E3E84F3E/share.png
+../../data/theend.png		/epoc32/winscw/c/private/E3E84F3E/theend.png
+../../data/tick.png		/epoc32/winscw/c/private/E3E84F3E/tick.png
+../../data/undo.png		/epoc32/winscw/c/private/E3E84F3E/undo.png
+
+../../data/C00_Title.npz	/epoc32/winscw/c/private/E3E84F3E/C00_Title.npz
+../../data/C01_Tutorial.npz		/epoc32/winscw/c/private/E3E84F3E/C01_Tutorial.npz	
+../../data/C10_Standard.npz		/epoc32/winscw/c/private/E3E84F3E/C10_Standard.npz
+../../data/C50_Gesualdi.npz		/epoc32/winscw/c/private/E3E84F3E/C50_Gesualdi.npz
+../../data/L00_title.nph		/epoc32/winscw/c/private/E3E84F3E/L00_title.nph
+../../data/L01_tutorial.nph		/epoc32/winscw/c/private/E3E84F3E/L01_tutorial.nph
+../../data/L05_plane_sailing.nph		/epoc32/winscw/c/private/E3E84F3E/L05_plane_sailing.nph
+../../data/L10_the_leap.nph		/epoc32/winscw/c/private/E3E84F3E/L10_the_leap.nph
+../../data/L15_trampoline.nph		/epoc32/winscw/c/private/E3E84F3E/L15_trampoline.nph
+../../data/L30_see_saw.nph		/epoc32/winscw/c/private/E3E84F3E/L30_see_saw.nph
+../../data/L35_pendulum.nph	/epoc32/winscw/c/private/E3E84F3E/L35_pendulum.nph
+../../data/L35_pusher.nph		/epoc32/winscw/c/private/E3E84F3E/L35_pusher.nph
+../../data/L38_box.nph		/epoc32/winscw/c/private/E3E84F3E/L38_box.nph
+../../data/L40_tree_of_life.nph		/epoc32/winscw/c/private/E3E84F3E/L40_tree_of_life.nph
+../../data/L50_nautilus.nph		/epoc32/winscw/c/private/E3E84F3E/L50_nautilus.nph
+../../data/L99_Gravity_Test.nph	/epoc32/winscw/c/private/E3E84F3E/L99_Gravity_Test.nph
+
+../data/sdl.ini		/epoc32/winscw/c/data/numptyphysics/sdl.ini

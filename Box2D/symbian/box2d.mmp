@@ -1,0 +1,81 @@
+/* Box2d MMP file
+ *
+ * Copyright (C) 2010 Summeli <summeli@summeli.fi>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ */
+
+// *** Definitions
+
+TARGET          box2d.lib
+TARGETTYPE      lib
+
+//OPTION GCCE -wchar_t on
+//MACRO  _WCHAR_T_DECLARED
+
+OPTION GCCE -march=armv5t -O0 -fexpensive-optimizations -finline -finline-function -ffast-math -msoft-float -falign-functions=32 -falign-loops -falign-labels -falign-jumps -fomit-frame-pointer
+
+//MACRO TARGET_FLOAT32_IS_FIXED
+
+// *** Include paths
+
+SYSTEMINCLUDE   \epoc32\include 
+SYSTEMINCLUDE	\epoc32\include\stdapis
+SYSTEMINCLUDE	\epoc32\include\stdapis\sys
+SYSTEMINCLUDE	\epoc32\include\stdapis\stlport\stl
+SYSTEMINCLUDE	\epoc32\include\stdapis\stlport\
+
+
+
+USERINCLUDE	../SOURCE/Collision
+//USERINCLUDE	../SOURCE/Collision/Shapes
+USERINCLUDE	../SOURCE/Dynamics
+USERINCLUDE	../SOURCE/Dynamics/Joints
+USERINCLUDE	../SOURCE/Dynamics/Contacts/
+USERINCLUDE	../SOURCE/Common
+
+SOURCEPATH 	..
+
+SOURCE  Source/Collision/b2Distance.cpp
+SOURCE	Source/Collision/b2TimeOfImpact.cpp 
+SOURCE	Source/Collision/b2CollideCircle.cpp 
+SOURCE	Source/Collision/b2CollidePoly.cpp 
+SOURCE	Source/Collision/Shapes/b2PolygonShape.cpp
+SOURCE	Source/Collision/Shapes/b2CircleShape.cpp
+SOURCE	Source/Collision/Shapes/b2Shape.cpp 
+SOURCE	Source/Collision/b2PairManager.cpp
+SOURCE	Source/Collision/b2Collision.cpp
+SOURCE	Source/Collision/b2BroadPhase.cpp
+SOURCE	Source/Dynamics/b2WorldCallbacks.cpp
+SOURCE	Source/Dynamics/Joints/b2PrismaticJoint.cpp
+SOURCE	Source/Dynamics/Joints/b2MouseJoint.cpp
+SOURCE	Source/Dynamics/Joints/b2GearJoint.cpp
+SOURCE	Source/Dynamics/Joints/b2Joint.cpp
+SOURCE	Source/Dynamics/Joints/b2PulleyJoint.cpp
+SOURCE	Source/Dynamics/Joints/b2DistanceJoint.cpp
+SOURCE	Source/Dynamics/Joints/b2RevoluteJoint.cpp
+SOURCE	Source/Dynamics/Contacts/b2CircleContact.cpp
+SOURCE	Source/Dynamics/Contacts/b2PolyAndCircleContact.cpp
+SOURCE	Source/Dynamics/Contacts/b2Contact.cpp
+SOURCE	Source/Dynamics/Contacts/b2PolyContact.cpp
+SOURCE	Source/Dynamics/Contacts/b2ContactSolver.cpp
+SOURCE	Source/Dynamics/b2Island.cpp
+SOURCE	Source/Dynamics/b2Body.cpp
+SOURCE  Source/Dynamics/b2ContactManager.cpp
+SOURCE	Source/Dynamics/b2World.cpp
+SOURCE	Source/Common/b2BlockAllocator.cpp
+SOURCE	Source/Common/b2StackAllocator.cpp
+SOURCE	Source/Common/b2Settings.cpp
+SOURCE	Source/Common/b2Math.cpp

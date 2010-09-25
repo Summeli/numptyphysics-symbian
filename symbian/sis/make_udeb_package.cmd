@@ -1,0 +1,1 @@
+call createsis create -cert numptyphysics.cer -key numptyphysics.key NumptyPhysics_udeb.pkg

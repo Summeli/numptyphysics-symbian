@@ -1,0 +1,4 @@
+PORTING TODOs
+
+1. Box2d config: what value should be used?
+const int32 b2_maxPolyVertices = 8; 

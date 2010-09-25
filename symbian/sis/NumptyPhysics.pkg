@@ -1,0 +1,81 @@
+; Installation file for NumptyPhysics application
+;
+; Copyright (C) 2010 Summeli <summeli@summeli.fi>
+;
+;  This program is free software; you can redistribute it and/or
+;  modify it under the terms of the GNU General Public License as
+;  published by the Free Software Foundation; either version 2 of
+;  the License, or (at your option) any later version.
+; 
+;  This program is distributed in the hope that it will be useful,
+;  but WITHOUT ANY WARRANTY; without even the implied warranty of
+;  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;  General Public License for more details.
+; 
+;  You should have received a copy of the GNU General Public License
+;  along with this program; if not, write to the Free Software
+;  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+; 
+;Languages
+&EN
+
+;
+; UID is the app's UID
+;
+#{"NumptyPhysics"},(0xE3E84F3E),0,2,0
+
+;Localised Vendor name
+%{"Summeli"}
+
+;Unique Vendor name
+:"Summeli"
+
+; Supports Series 60 v 5.0
+[0x1028315F], 0, 0, 0, {"S60ProductID"}
+
+;display the licence
+"COPYING"												-"!:\data\numptyphysics\copying.txt", FT, TC
+"README"											-"!:\data\numptyphysics\readme.txt", FT, TC
+
+; Files to install
+; Symbols set up for the source location are Carbide.c++ specific symbols
+"\S60\devices\S60_5th_Edition_SDK_v1.0\epoc32\release\GCCE\UREL\NumptyPhysics.exe"             -"!:\sys\bin\NumptyPhysics.exe"
+"\S60\devices\S60_5th_Edition_SDK_v1.0\epoc32\data\z\resource\apps\NumptyPhysics.rsc"             -"!:\resource\apps\NumptyPhysics.rsc"
+"\S60\devices\S60_5th_Edition_SDK_v1.0\epoc32\data\z\private\10003a3f\import\apps\NumptyPhysics_reg.rsc"   -"!:\private\10003a3f\import\apps\NumptyPhysics_reg.rsc"
+
+"..\gfx\numptyphysics.mif"    - "!:\resource\apps\numptyphysics.mif"
+
+;content files
+"..\..\data\blank.png"		-"!:\private\E3E84F3E\blank.png"
+"..\..\data\choose.png"		-"!:\private\E3E84F3E\choose.png"
+"..\..\data\close.png"		-"!:\private\E3E84F3E\close.png"
+"..\..\data\edit.png"		-"!:\private\E3E84F3E\edit.png"
+"..\..\data\femkeklaver.ttf"		-"!:\private\E3E84F3E\femkeklaver.ttf"
+"..\..\data\font.npf"		-"!:\private\E3E84F3E\font.npf"
+"..\..\data\forward.png"		-"!:\resource\apps\numptyphysicsforward.png"
+"..\..\data\help.png"		-"!:\private\E3E84F3E\help.png"
+"..\..\data\next.png"		-"!:\private\E3E84F3E\next.png"
+"..\..\data\next_win32.png"		-"!:\private\E3E84F3E\next_win32.png"
+"..\..\data\paper.jpg"		-"!:\private\E3E84F3E\paper.jpg"
+"..\..\data\paper.png"		-"!:\private\E3E84F3E\paper.png"
+"..\..\data\pause.png"		-"!:\private\E3E84F3E\pause.png"
+"..\..\data\pen.png"		-"!:\private\E3E84F3E\pen.png"
+"..\..\data\play.png"		-"!:\private\E3E84F3E\play.png"
+"..\..\data\record.png"		-"!:\private\E3E84F3E\record.png"
+"..\..\data\reset.png"		-"!:\private\E3E84F3E\reset.png"
+"..\..\data\share.png"		-"!:\private\E3E84F3E\share.png"
+"..\..\data\theend.png"		-"!:\private\E3E84F3E\theend.png"
+"..\..\data\tick.png"		-"!:\private\E3E84F3E\tick.png"
+"..\..\data\undo.png"		-"!:\private\E3E84F3E\undo.png"
+
+;default levels
+"..\..\data\C00_Title.npz"	-"!:\private\E3E84F3E\C00_Title.npz"
+"..\..\data\C01_Tutorial.npz"		-"!:\private\E3E84F3E\C01_Tutorial.npz"	
+"..\..\data\C10_Standard.npz"		-"!:\private\E3E84F3E\C10_Standard.npz"
+"..\..\data\C50_Gesualdi.npz"		-"!:\private\E3E84F3E\C50_Gesualdi.npz"
+
+"..\data\sdl.ini"		-"!:\data\numptyphysics\sdl.ini"
+"..\data\copy_levels_here.txt"		-"!:\data\numptyphysics\copy_levels_here.txt"
+
+; required for application to be covered by backup/restore facility 
+"..\sis\backup_registration.xml"    -"!:\private\E3E84F3E\backup_registration.xml"

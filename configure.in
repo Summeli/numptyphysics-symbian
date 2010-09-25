@@ -1,0 +1,83 @@
+AC_INIT
+AC_CONFIG_SRCDIR([README])
+AM_INIT_AUTOMAKE(numptyphysics,0.3)
+#AM_CONFIG_HEADER(amconfig.h)
+
+AC_PROG_CC
+AC_PROG_CXX
+AC_PROG_MAKE_SET
+AC_PROG_INSTALL
+AC_PROG_RANLIB
+
+# Check for SDL
+AC_CHECK_HEADER(
+	SDL/SDL.h,
+	AC_DEFINE(
+		[HAVE_LIBSDL],
+		[],
+		Define to 1 if you have the <SDL/SDL.h> header file.
+		)
+		SDL_LIBS="-lSDL"
+		sdl=yes,
+	AC_MSG_ERROR([*** no SDL/SDL.h - SDL not found])
+)
+AC_SUBST(SDL_CFLAGS)
+AC_SUBST(SDL_LIBS)
+
+# Check for SDL_image library
+AC_CHECK_LIB(SDL_image, IMG_LoadPNG_RW, , AC_MSG_ERROR([
+*** Unable to find SDL_image libary with PNG support
+]))
+AC_CHECK_LIB(SDL_ttf, TTF_OpenFont, , AC_MSG_ERROR([
+*** Unable to find SDL_ttf libary
+]))
+
+AC_ARG_ENABLE(hildon, [  --disable-hildon             build without maemo/hildon support], enable_hildon=$enableval, enable_hildon=yes)
+
+if test "x${enable_hildon}" = "xyes" ; then
+#   PKG_CHECK_MODULES(HILDON, [hildon-1 hildon-fm-2 libossoemailinterface], 
+   PKG_CHECK_MODULES(HILDON, [hildon-1 dbus-1 libosso], 
+   			     [enable_hildon=yes], [enable_hildon=no])
+fi
+if test "x${enable_hildon}" = "xyes" ; then
+   AC_DEFINE( [USE_HILDON],[], using hildon )
+   desktopentrydir=`$PKG_CONFIG osso-af-settings --variable=desktopentrydir`
+   serviceentrydir=`$PKG_CONFIG osso-af-settings --variable=dbusservicedir`
+   numptyphysicsdir=/opt/numptyphysics
+   icon_26x26dir=$datadir/icons/hicolor/26x26/hildon
+   icon_34x34dir=$datadir/icons/hicolor/34x34/hildon
+   icon_40x40dir=$datadir/icons/hicolor/40x40/hildon
+   icon_50x50dir=$datadir/icons/hicolor/50x50/hildon
+   icon_64x64dir=$datadir/icons/hicolor/64x64/hildon
+   icon_scalabledir=$datadir/icons/hicolor/scalable/hildon
+   AC_SUBST(HILDON_CFLAGS)
+   AC_SUBST(HILDON_LIBS)
+else
+   desktopentrydir=/usr/share/applications
+   serviceentrydir=$datadir/numptyphysics
+   numptyphysicsdir=$datadir/numptyphysics
+   icon_26x26dir=$datadir/icons/hicolor/26x26/apps
+   icon_34x34dir=$datadir/icons/hicolor/34x34/apps
+   icon_40x40dir=$datadir/icons/hicolor/40x40/apps
+   icon_50x50dir=$datadir/icons/hicolor/50x50/apps
+   icon_64x64dir=$datadir/icons/hicolor/64x64/apps
+   icon_scalabledir=$datadir/icons/hicolor/scalable/apps
+fi
+AC_SUBST(desktopentrydir)
+AC_SUBST(serviceentrydir)
+AC_SUBST(numptyphysicsdir)
+AC_SUBST(icon_26x26dir)
+AC_SUBST(icon_34x34dir)
+AC_SUBST(icon_40x40dir)
+AC_SUBST(icon_50x50dir)
+AC_SUBST(icon_64x64dir)
+AC_SUBST(icon_scalabledir)
+
+
+AC_CHECK_LIB(stdc++, main)
+AC_CHECK_LIB(X11, main)
+AC_CHECK_LIB(z, main)
+
+
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT
