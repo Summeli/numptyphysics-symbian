@@ -33,6 +33,7 @@
 
 #ifdef __SYMBIAN32__
 #include <SDL.h>
+#include "OsSymbian.h"
 #define KSymbianWidth 640
 #define KSymbianHeight 360
 #else

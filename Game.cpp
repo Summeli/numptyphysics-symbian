@@ -32,6 +32,7 @@
 #ifdef __SYMBIAN32__
 #include <SDL.h>
 #include <SDL_image.h>
+#include "OsSymbian.h"
 #else
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>

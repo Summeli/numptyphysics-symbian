@@ -19,7 +19,9 @@
 #include <sstream>
 #include <cstdio>
 
-
+#ifdef __SYMBIAN32__
+#include "OsSymbian.h"
+#endif
 ScriptEntry::ScriptEntry( const std::string& str )
 {
   char opc;
